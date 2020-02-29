@@ -54,7 +54,7 @@ public class Login extends AppCompatActivity {
 
                             startActivity(new Intent(Login.this, MainActivity.class));
                         }else{
-                            //todo 细化提示
+                            //todo 细化提示 123
                             Toast.makeText(Login.this,"登录失败"+e.getErrorCode(),Toast.LENGTH_SHORT).show();
                         }
 
