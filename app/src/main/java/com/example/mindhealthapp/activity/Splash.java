@@ -36,13 +36,16 @@ public class Splash extends AppCompatActivity {
                     Toast.makeText(Splash.this,"您已登录",Toast.LENGTH_SHORT).show();
 
                     startActivity(new Intent(Splash.this,MainActivity.class));
+
                 }else{
                     Toast.makeText(Splash.this,"请登录",Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(Splash.this,Login.class));
                 }
+                Splash.this.finish();
+
+
             }
         }, 2000);
-
 
     }
 

@@ -31,9 +31,10 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         BmobUser.logOut();
-                        Toast.makeText(MainActivity.this,"退出成功"+getIntent().,Toast.LENGTH_SHORT).show();
-
-
+                        Toast.makeText(MainActivity.this,"退出成功",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this,Login.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
                         MainActivity.this.finish();
 
                     }
