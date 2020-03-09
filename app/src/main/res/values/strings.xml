@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">MindHealthApp</string>
     <string name="hello">你好</string>
+    <string name="title_home">Home</string>
+    <string name="title_appointment">Appointment</string>
+    <string name="title_conversation">Conversation</string>
+    <string name="title_settings">settings</string>
 </resources>
