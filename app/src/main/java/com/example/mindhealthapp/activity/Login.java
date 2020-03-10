@@ -12,15 +12,12 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.mindhealthapp.Interface.UserInfo;
+import com.example.mindhealthapp.Bean.UserInfo;
 import com.example.mindhealthapp.MainActivity;
 import com.example.mindhealthapp.R;
-import com.google.android.material.snackbar.Snackbar;
 
-import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
