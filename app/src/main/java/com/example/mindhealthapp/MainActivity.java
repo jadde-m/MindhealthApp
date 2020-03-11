@@ -29,6 +29,7 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
 
 public class MainActivity extends AppCompatActivity {
@@ -63,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        //TODO 看是否每个activity需要初始化
+        Bmob.initialize(this, "d678f27fde3ba99626b41d550316f7ba");
         setContentView(R.layout.activity_main);
         viewPager = findViewById(R.id.viewpager);
         bottomNavigationView = findViewById(R.id.nav_view);

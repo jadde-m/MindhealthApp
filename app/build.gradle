@@ -12,6 +12,11 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -38,9 +43,20 @@ dependencies {
     implementation 'androidx.percentlayout:percentlayout:1.0.0'
     implementation 'org.jetbrains:annotations-java5:15.0'
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'  //1.0.5及以前版本的老用户升级需谨慎，API改动过大
+    //下拉框
+    implementation 'com.github.arcadefire:nice-spinner:1.4.4'
+    //switch框
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    //日历插件
+    implementation 'cn.aigestudio.datepicker:DatePicker:2.2.0'
+
+
+    implementation 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
+
 
 }
 configurations {
     cleanedAnnotations
     compile.exclude group: 'org.jetbrains' , module:'annotations'
+
 }

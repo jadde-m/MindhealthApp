@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <!--标题栏颜色-->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">#DDD</item>
 
         <!--状态栏颜色-->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

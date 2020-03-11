@@ -5,4 +5,8 @@
     <string name="title_appointment">Appointment</string>
     <string name="title_conversation">Conversation</string>
     <string name="title_settings">settings</string>
+    <string name="appointment">Appointment</string>
+    <string name="contactnumber">联系方式：</string>
+    <string name="name">姓名:</string>
+    <string name="choosetime">选择时间：</string>
 </resources>

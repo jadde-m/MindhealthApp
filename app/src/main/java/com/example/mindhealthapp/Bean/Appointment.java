@@ -6,20 +6,16 @@ import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.datatype.BmobDate;
 
 public class Appointment extends BmobObject {
-    /*
-    * Date 时间
-    * UserInfo 咨询师 预约学生
-    * int 预约状态 0：未预约 1：已预约 2：已完成 3：已反馈
-    *     出席状态 0：未出席 1：已出席
-    * String 情况描述 反馈
-    *
-    *
-    */
 
+    // 时间
     private BmobDate date;
+    // 教师、预约学生
     private UserInfo teacher,student;
+    // 预约状态 0：未预约 1：已预约 2：已完成 3：已反馈
+    // 出席状态 0：未出席 1：已出席
     private int status,absence;
-    private String describe,review;
+    // 情况描述 反馈 手机
+    private String describe,review,phone;
 
 
     public BmobDate getDate() {
@@ -76,5 +72,13 @@ public class Appointment extends BmobObject {
 
     public void setReview(String review) {
         this.review = review;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

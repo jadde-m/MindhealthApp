@@ -50,6 +50,7 @@ public class Login extends AppCompatActivity {
                     成功登录->检测是否首次登录->首次登录，转到信息填写页
                                             ->非首次登录，转到主页
                     */
+                //TODO:提前检查
                 user.login(new SaveListener<UserInfo>() {
 
                     @Override

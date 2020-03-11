@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/appointment"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/textcolour" />
+    </Toolbar>
+    <LinearLayout
+        android:layout_marginTop="5sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choosetime"
+            android:textSize="20sp"
+            android:textColor="@color/textcolour"
+            android:layout_marginStart="10dp"/>
+        <TextView
+
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:textSize="20sp"
+            android:textColor="@color/textcolour"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content" />
+
+
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+        <!--教师选择框-->
+        <org.angmarch.views.NiceSpinner
+            android:id="@+id/appointspinner"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="教师"
+            android:textColor="@color/textcolour"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/appointspinner"
+            app:layout_constraintRight_toLeftOf="@+id/appointswitch" />
+        <com.suke.widget.SwitchButton
+            android:id="@+id/appointswitch"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sb_show_indicator="false"
+            app:sb_background="#A7A"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:textColor="@color/textcolour"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/appointspinner"
+            app:layout_constraintRight_toRightOf="parent" />
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/upitemframe"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <include
+                    layout="@layout/time_list" />
+
+
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="?android:attr/listDivider" />
+
+            <FrameLayout
+                android:id="@+id/dummyitemframe"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <include layout="@layout/teacher_list" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/buttoncolour"
+        android:text="预约"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</LinearLayout>
