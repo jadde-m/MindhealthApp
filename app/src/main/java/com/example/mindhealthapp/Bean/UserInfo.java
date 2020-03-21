@@ -3,6 +3,7 @@ package com.example.mindhealthapp.Bean;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.datatype.BmobDate;
 import cn.bmob.v3.datatype.BmobFile;
+import cn.bmob.v3.datatype.BmobRelation;
 
 public class UserInfo extends BmobUser {
     //  用户名：学号 首次登录密码：身份证号，邮箱、手机号码
@@ -15,8 +16,12 @@ public class UserInfo extends BmobUser {
        int 账号状态 0：新账号，1：老账号，2：禁用
     */
     private int sex,id,status,type;
+    private String name;
     private BmobDate date;
     private BmobFile icon;
+    private BmobRelation comments;
+    private BmobRelation likes;
+    private BmobRelation visiters;
 
 
 
@@ -66,5 +71,37 @@ public class UserInfo extends BmobUser {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public BmobRelation getComments() {
+        return comments;
+    }
+
+    public void setComments(BmobRelation comments) {
+        this.comments = comments;
+    }
+
+    public BmobRelation getLikes() {
+        return likes;
+    }
+
+    public void setLikes(BmobRelation likes) {
+        this.likes = likes;
+    }
+
+    public BmobRelation getVisiters() {
+        return visiters;
+    }
+
+    public void setVisiters(BmobRelation visiters) {
+        this.visiters = visiters;
     }
 }

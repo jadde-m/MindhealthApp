@@ -12,6 +12,8 @@ public class Comment extends BmobObject {
     private String content;
     //发帖日期
     private BmobDate date;
+    //
+    private String nickname;
 
     public Post getPost() {
         return post;
@@ -43,5 +45,13 @@ public class Comment extends BmobObject {
 
     public void setDate(BmobDate date) {
         this.date = date;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 }

@@ -1,7 +1,11 @@
 package com.example.mindhealthapp.Bean;
 
+import android.util.Log;
+
 import cn.bmob.v3.BmobObject;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.datatype.BmobDate;
+import cn.bmob.v3.datatype.BmobPointer;
 import cn.bmob.v3.datatype.BmobRelation;
 
 public class Post extends BmobObject {
@@ -17,8 +21,22 @@ public class Post extends BmobObject {
     private BmobRelation likes;
     //浏览者
     private BmobRelation visiters;
+    //浏览者
+    private BmobRelation comments;
     //点赞数，浏览数
-    private int like,visiter;
+    private int like,visiter,comment;
+
+
+
+    public Post(){
+        likes = new BmobRelation();
+        visiters = new BmobRelation();
+        comments = new BmobRelation();
+        like = 0;
+        visiter = 0;
+        comment = 0;
+    }
+
 
     public UserInfo getSender() {
         return sender;
@@ -52,35 +70,67 @@ public class Post extends BmobObject {
         this.date = date;
     }
 
-    public BmobRelation getLikes() {
-        return likes;
+    public void addLike() {
+        like++;
     }
 
-    public void setLikes(BmobRelation likes) {
-        this.likes = likes;
+    public void deleteLike() {
+        like--;
     }
 
-    public BmobRelation getVisiters() {
-        return visiters;
+    public void addVisiter() {
+        visiter++;
+    }
+/*
+    public void deleteVisiter() {
+        visiter--;
+    }*/
+
+
+    public void addComment() {
+        comment++;
     }
 
-    public void setVisiters(BmobRelation visiters) {
-        this.visiters = visiters;
+    public void deleteComment() {
+        comment--;
     }
 
-    public int getLike() {
-        return like;
+    public void removeComments(Comment comment) {
+        this.comments.remove(comment);
     }
 
-    public void setLike(int like) {
-        this.like = like;
+    public void addComments(Comment comment) {
+        this.comments.add(comment);
     }
 
-    public int getVisiter() {
-        return visiter;
+    public void removeVisiters(UserInfo user) {
+        visiters.remove(user);
     }
 
-    public void setVisiter(int visiter) {
-        this.visiter = visiter;
+    public void addVisiters(UserInfo user) {
+        visiters.add(user);
     }
+
+    public void removeLikes(UserInfo user) {
+        likes.remove(user);
+    }
+
+    public void addLikes(UserInfo user) {
+        likes.add(user);
+    }
+
+    public Boolean searchlike(UserInfo user){
+
+        Log.e("this","relation中有"+likes.getObjects().size()+"个");
+        if(likes.getObjects().contains(new BmobPointer(user))){
+
+            Log.e("this","relation中有");
+            return true;
+        }else {
+            Log.e("this","relation中无");
+            return false;
+        }
+    }
+
+
 }

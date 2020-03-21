@@ -18,21 +18,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".activity.PostDetailActivity"></activity>
 
         <provider
             android:name="cn.bmob.v3.util.BmobContentProvider"
-            android:authorities="com.example.mindhealthapp.BmobContentProvider"></provider>
+            android:authorities="com.example.mindhealthapp.BmobContentProvider" />
 
-        <activity android:name=".activity.Splash"/>
+        <activity android:name=".activity.Splash" />
         <activity android:name=".activity.Login" />
-        <activity android:name=".activity.DatepickActivity" >
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".activity.DatepickActivity" />
+        <activity android:name=".activity.SendCommentActivity" />
     </application>
 
 </manifest>

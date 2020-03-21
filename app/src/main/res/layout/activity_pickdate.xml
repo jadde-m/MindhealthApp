@@ -9,13 +9,14 @@
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/Toolbar">
         <TextView
-            android:layout_marginEnd="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="15dp"
             android:text="@string/appointment"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:gravity="center"
             android:textColor="@color/textcolour" />
     </Toolbar>
@@ -32,21 +33,21 @@
             android:textColor="@color/textcolour"
             android:layout_marginStart="10dp"/>
         <TextView
-
+            android:id="@+id/appointchosentime"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="时间"
             android:textSize="20sp"
             android:textColor="@color/textcolour"
             android:layout_marginStart="10dp"
-            android:layout_width="wrap_content" />
+            android:layout_width="wrap_content"
+            android:onClick="onclick"/>
 
 
     </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="500dp">
+        android:layout_height="400dp">
         <!--教师选择框-->
         <org.angmarch.views.NiceSpinner
             android:id="@+id/appointspinner"
@@ -82,9 +83,10 @@
             app:layout_constraintBottom_toBottomOf="@+id/appointspinner"
             app:layout_constraintRight_toRightOf="parent" />
         <LinearLayout
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/appointspinner"
             android:orientation="horizontal">
 
             <FrameLayout
@@ -100,11 +102,11 @@
 
 
             </FrameLayout>
-
             <View
+                android:id="@+id/divider"
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="?android:attr/listDivider" />
+                android:background="#000" />
 
             <FrameLayout
                 android:id="@+id/dummyitemframe"
@@ -123,14 +125,5 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/buttoncolour"
-        android:text="预约"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
 
 </LinearLayout>

@@ -9,4 +9,5 @@
     android:layout_marginLeft="6dp"
     android:layout_marginRight="6dp"
     app:layoutManager="LinearLayoutManager"
-    tools:listitem="@layout/teacher_list_content" />
+    tools:listitem="@layout/teacher_list_content"
+    tools:context=".activity.DatepickActivity"/>

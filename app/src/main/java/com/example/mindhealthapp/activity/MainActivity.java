@@ -1,36 +1,26 @@
-package com.example.mindhealthapp;
+package com.example.mindhealthapp.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Toast;
 
-import com.example.mindhealthapp.activity.Login;
+import com.example.mindhealthapp.R;
+import com.example.mindhealthapp.adapter.FragmentAdapter;
 import com.example.mindhealthapp.fragment.AppointFragment;
-import com.example.mindhealthapp.fragment.ConverFragment;
 import com.example.mindhealthapp.fragment.MainFragment;
+import com.example.mindhealthapp.fragment.PostsFragment;
 import com.example.mindhealthapp.fragment.SettingFragment;
-import com.google.android.material.bottomnavigation.BottomNavigationMenu;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import cn.bmob.v3.Bmob;
-import cn.bmob.v3.BmobUser;
 
 public class MainActivity extends AppCompatActivity {
     private Button logoutbut;
@@ -79,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         final List<Fragment> fragments = new ArrayList<>();
         fragments.add(new MainFragment());
         fragments.add(new AppointFragment());
-        fragments.add(new ConverFragment());
+        fragments.add(new PostsFragment());
         fragments.add(new SettingFragment());
 
 

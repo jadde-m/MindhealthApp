@@ -1,14 +1,14 @@
 package com.example.mindhealthapp.Bean;
 
-import java.util.Date;
-
 import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.datatype.BmobDate;
 
 public class Appointment extends BmobObject {
 
-    // 时间
+    //日期
     private BmobDate date;
+    //时间段 9-17 每次咨询1h
+    private int time;
     // 教师、预约学生
     private UserInfo teacher,student;
     // 预约状态 0：未预约 1：已预约 2：已完成 3：已反馈
@@ -17,6 +17,13 @@ public class Appointment extends BmobObject {
     // 情况描述 反馈 手机
     private String describe,review,phone;
 
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
 
     public BmobDate getDate() {
         return date;

@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mindhealthapp.Bean.UserInfo;
-import com.example.mindhealthapp.MainActivity;
 import com.example.mindhealthapp.R;
 
 import cn.bmob.v3.BmobUser;

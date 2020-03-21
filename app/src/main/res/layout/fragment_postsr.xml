@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#AAA">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -11,17 +12,15 @@
         android:layout_height="wrap_content"
         android:background="@color/buttoncolour">
         <Toolbar
-            android:id="@+id/maintoolbar"
+            android:id="@+id/posttoolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ACD">
+            android:background="@color/Toolbar">
             <TextView
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
+                android:layout_margin="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Main"
+                android:text="Posts"
                 android:textSize="30dp"
                 android:gravity="center"
                 android:textColor="@color/textcolour" />
@@ -35,21 +34,26 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:orientation="vertical">
         <com.scwang.smartrefresh.layout.SmartRefreshLayout
-            android:id="@+id/refresh"
+            android:id="@+id/postrefresh"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/mainrecycleview"
+                android:id="@+id/postsrecycleview"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
+                android:layout_height="match_parent"
+                android:name="com.example.myapplication.ItemListFragment"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                tools:listitem="@layout/posts_list_content"
+                tools:context=".activity.DatepickActivity"/>
         </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 
-        
+
+
+
+
+
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

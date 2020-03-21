@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#FFF</color>
+    <color name="windowBackground">#FFF</color>
     <color name="colorPrimaryDark">#9FF</color>
     <color name="colorAccent">#D81B60</color>
     <color name="buttoncolour">#000</color>
     <color name="textcolour">#000</color>
+    <color name="Postback">#AAD</color>
+    <color name="Toolbar">#ACD</color>
 </resources>

@@ -8,17 +8,15 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.mindhealthapp.MainActivity;
 import com.example.mindhealthapp.R;
 
-import java.util.Timer;
-import java.util.TimerTask;
+
+import java.text.SimpleDateFormat;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
 
 public class Splash extends AppCompatActivity {
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
